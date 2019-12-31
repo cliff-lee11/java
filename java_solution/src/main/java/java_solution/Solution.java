@@ -1,52 +1,40 @@
 package java_solution;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 /**
  * The type Solution.
- * Sherlock and the Valid String
+ * Special String Again
  */
 public class Solution {
 
-    /**
-     * Is valid string.
-     *
-     * @param s the s
-     * @return the string
-     */
-// Complete the isValid function below.
-    static String isValid(String s) {
 
+	// Complete the substrCount function below.
+	static long substrCount(int n, String s) {
 
-        return "";
-    }
+		return 0;
 
-    private static final Scanner scanner = new Scanner(System.in);
+	}
 
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     * @throws IOException the io exception
-     */
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+	private static final Scanner scanner = new Scanner(System.in);
 
-        String s = scanner.nextLine();
+	public static void main(String[] args) throws IOException {
+		BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String result = isValid(s);
+		int n = scanner.nextInt();
+		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        bufferedWriter.write(result);
-        bufferedWriter.newLine();
+		String s = scanner.nextLine();
 
-        bufferedWriter.close();
+		long result = substrCount(n, s);
 
-        scanner.close();
-    }
+		bufferedWriter.write(String.valueOf(result));
+		bufferedWriter.newLine();
+
+		bufferedWriter.close();
+
+		scanner.close();
+	}
+
 }
